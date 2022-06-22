@@ -1,5 +1,5 @@
 # Cryptocurrencies
-Unsupervised Mschine Learning
+Unsupervised Machine Learning
 
 
 ## Table of Contents
@@ -40,7 +40,7 @@ The preproesing steps include the follwoing:
 * **Feature Elimination** - We remove a good amount of features, so the model won't be run using every column. Too many features in a dataset, can lead to overfitting which inturn leads to inaccurate results. Hence in our dataset, we removed the columns like - "CoinName", "IsTrading". 
 * **Feature Extraction** - This combines all features into a new set that is ordered by how well they predict our original variable.
 * **Dimensionality Reduction - PCA** - The process of reducing features is called Dimensionality Reduction. PCA reduces the number of dimensions by transforming a large set of variables into a smaller one that contains most of the information in the original large set. We have perofrmed PCA on our dataset and reduced the number of features from ***98 coulmns to 3 columns***.
-<p align="center"> <img src = "graphics/pca.png" width ="45%"> </p> 
+<p align="center"> <img src = "graphics/pca.png" width ="30%"> </p> 
 
 ### <a name="clustering"></a> KMeans Clustering Unsupervised Algorithm
 For the cryptocurrency dataset, I have used KMeans clustering algorithm frrom the Scikit Library.
@@ -51,7 +51,7 @@ The number of clusters is determined by the **Elbow Curve**. To create an elbow 
 
 We get the below graph after plotting the data:
 
-<p align="center"> <img src = "graphics/elbowcurve.png" width ="45%"> </p> 
+<p align="center"> <img src = "graphics/elbowcurve.png" width ="60%"> </p> 
 
 ***From the above elbow curve, we can determine the Kvalue as 4 and execute the K-means unsupervised algorithm to cluster our data.***
 
@@ -59,15 +59,15 @@ We get the below graph after plotting the data:
 Visualizing the clusters helps to graphically understand how they are arranged. For our visualizations, we have used hvPlot, a graphing library that allows deeper exploration of the data.
 Below is a 3D-Scatter Plot with the PCA data and the clusters. We can see that the data is clustered into 4 main groups.
 
-<p align="center"> <img src = "graphics/3dgraph.png" width ="45%"> </p> 
+<p align="center"> <img src = "graphics/3dgraph.png" width ="60%"> </p> 
   
 Below is a hvplot.scatter plot (2D-scatter plot) using x="TotalCoinsMined" and y="TotalCoinSupply". From the graph we can see a correlation between those two components.
 
-<p align="center"> <img src = "graphics/2dgraph.png" width ="45%"> </p> 
+<p align="center"> <img src = "graphics/2dgraph.png" width ="60%"> </p> 
 
 Interactive Table:
 We have also created an interactive table displaying the tradable cryptocurrencies and its details using ***hvplot library***. We can sort the data in the table for our analysis.
-<p align="center"> <img src = "graphics/interactive_table.png" width ="45%"> </p> 
+<p align="center"> <img src = "graphics/interactive_table.png" width ="55%"> </p> 
 
 ## <a name="resources"></a> Resources
 [1] [Cryptocurrency data](crypto_data.csv) <br>
